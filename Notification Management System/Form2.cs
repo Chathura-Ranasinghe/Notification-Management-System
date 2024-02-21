@@ -31,13 +31,13 @@ namespace Notification_Management_System
 
             if (!IsValidEmail(email))
             {
-                MessageBox.Show("Wrong email format!");
+                messageLabel.Text = "Wrong email format";
                 return;
             }
 
             if (subscribers.Contains(email))
             {
-                MessageBox.Show("Duplicate email!");
+                messageLabel.Text = "Duplicate email!";
                 return;
             }
 
@@ -51,13 +51,13 @@ namespace Notification_Management_System
 
             if (!IsValidEmail(email))
             {
-                MessageBox.Show("Wrong email format!");
+                messageLabel.Text = "Wrong email format!";
                 return;
             }
 
             if (!subscribers.Contains(email))
             {
-                MessageBox.Show("Email not found!");
+                messageLabel.Text = "Email not found!";
                 return;
             }
 
@@ -81,6 +81,11 @@ namespace Notification_Management_System
             {
                 return false;
             }
+        }
+
+        private void messageLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

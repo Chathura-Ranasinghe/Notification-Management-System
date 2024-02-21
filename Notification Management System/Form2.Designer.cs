@@ -32,7 +32,7 @@
             subscribeBtn = new Button();
             unsubscribeBtn = new Button();
             cancelBtn = new Button();
-            mobileBox = new TextBox();
+            messageLabel = new Label();
             SuspendLayout();
             // 
             // mailBox
@@ -72,19 +72,23 @@
             cancelBtn.UseVisualStyleBackColor = true;
             cancelBtn.Click += cancelBtn_Click;
             // 
-            // mobileBox
+            // messageLabel
             // 
-            mobileBox.Location = new Point(53, 119);
-            mobileBox.Name = "mobileBox";
-            mobileBox.Size = new Size(476, 27);
-            mobileBox.TabIndex = 4;
+            messageLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            messageLabel.ForeColor = Color.Red;
+            messageLabel.Location = new Point(53, 114);
+            messageLabel.Name = "messageLabel";
+            messageLabel.Size = new Size(476, 24);
+            messageLabel.TabIndex = 4;
+            messageLabel.TextAlign = ContentAlignment.MiddleCenter;
+            messageLabel.Click += messageLabel_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(582, 253);
-            Controls.Add(mobileBox);
+            Controls.Add(messageLabel);
             Controls.Add(cancelBtn);
             Controls.Add(unsubscribeBtn);
             Controls.Add(subscribeBtn);
@@ -105,6 +109,6 @@
         private Button subscribeBtn;
         private Button unsubscribeBtn;
         private Button cancelBtn;
-        private TextBox mobileBox;
+        private Label messageLabel;
     }
 }

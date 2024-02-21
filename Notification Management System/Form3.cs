@@ -30,7 +30,6 @@ namespace Notification_Management_System
                 return;
             }
 
-            // Here you can implement the logic to send notification to all subscribers
             MessageBox.Show("Notification Published Successfully!");
             this.Close();
         }
